@@ -1,4 +1,4 @@
-action played
+
 import tkinter
 import math
 from math import *
@@ -277,3 +277,6 @@ def res():
         x= float(A/a)
         data.set(x)
         var = str(x)
+
+
+
