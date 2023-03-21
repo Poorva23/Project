@@ -1,2 +1,282 @@
-action played
-action not played
+
+import tkinter
+import math
+from math import *
+from tkinter import *
+from tkinter import messagebox
+# Messagebox module : It is used to display the message boxes in the python application.
+                     # There are various functions which are used to display the messageboxes
+
+var ="" 
+A = 0
+opr = ""
+
+#defining a function for button 1
+def button_1():
+    global var
+    var = var +"1"
+    data.set(var)
+
+#defining a function for button 2
+
+def button_2():
+    global var
+    var =  var + "2"
+    data.set(var)
+
+#defining a function for button 3
+
+def button_3():
+    global var
+    var = var + "3"
+    data.set(var)
+
+#defining a function for button 4
+
+def button_4():
+    global var
+    var = var + "4"
+    data.set(var)
+
+#defining a function for button 5
+
+def button_5():
+    global var
+    var = var + "5"
+    data.set(var)
+
+#defining a function for button 6
+
+def button_6():
+    global var
+    var = var + "6"
+    data.set(var)
+
+#defining a function for button 7
+
+def button_7():
+    global var
+    var = var + "7"
+    data.set(var)
+
+#defining a function for button 8
+
+def button_8():
+    global var
+    var = var + "8"
+    data.set(var)
+
+#defining a function for button 9
+
+def button_9():
+    global var
+    var = var + "9"
+    data.set(var)
+
+#defining a function for 0 
+
+def button_0():
+    global var
+    var = var + "0"
+    data.set(var)
+
+#defining a function for addition
+
+def button_add():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "+"
+    var = var + "+"
+    data.set(var)
+
+#defining a function for subtraction
+
+def button_sub():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "-"
+    var = var + "-"
+    data.set(var)
+
+#defining a function for multiply
+
+def button_multipy():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "*"
+    var  = var + "*"
+    data.set(var)
+
+#defining a function for division
+
+def button_divide():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "/"
+    var = var + "/"
+    data.set(var)
+
+#defining a function for equalto
+
+def button_equalto():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "="
+    var = var + "="
+    data.set(var)
+
+#defining a function for clearing
+
+def button_clear():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = ""
+    var = ""
+    data.set(var)
+
+#defining a function for absolute value
+
+def button_absval():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "//"
+    var = var + "//"
+    data.set(var)
+
+#defining a function for remainder
+
+def button_remainder():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "%"
+    var = var + "%"
+    data.set(var)
+
+#defining a function for power
+
+def button_power():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "**"
+    var = var + "**"
+    data.set(var)
+
+#defining a function for log
+
+def button_log():
+    global var
+    global A
+    global opr
+
+    A = float(var)
+    opr = "log"
+    var = var + "log"
+    data.set(var)
+
+#defining a function to display the result
+
+def res():
+    global var
+    global A
+    global opr 
+    var2 = var
+
+    if opr == "+":
+
+        a = float(var2.split("+")[1])
+        x = A+a
+        data.set(x)
+        var = str(x)
+
+    elif opr == "-":
+
+        a = float(var2.split("-")[1])
+        x = A-a
+        data.set(x)
+        var = str(x)
+
+    elif opr == "*":
+
+        a = float(var2.split("*")[1])
+        x = A*a
+        data.set(x)
+        var = str(x)
+
+    elif opr == "/":
+
+        a = float(var2.split("/")[1]) 
+        x = A/a
+        data.set(x)
+        var = str(x)
+
+        if a== 0:
+            messagebox.showerror("Division by zero not allowed")
+            A=""
+            var=""
+            data.set(var) 
+            var = str(x)
+                       
+
+    elif opr == "//":
+
+        a = float(var2.split("//")[1])
+        x = A//a
+        data.set(x)
+        var = str(x)
+
+    elif opr == "%":
+
+        a = float(var2.split("%")[1])
+        x = A%a
+        data.set(x)
+        var = str(x)
+
+    elif opr == "**":
+
+        a = float(var2.split("**")[1])
+        x = A**a
+        data.set(x)
+        var = str(x)  
+
+    elif opr == "log":
+
+        a = float(var2.split("log")[1])
+        x = math.log(a)
+        data.set(x)
+        var = str(x)   
+
+    else :
+
+        x= float(A/a)
+        data.set(x)
+        var = str(x)
+
+
+
