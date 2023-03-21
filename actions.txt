@@ -277,6 +277,302 @@ def res():
         x= float(A/a)
         data.set(x)
         var = str(x)
+        # DEFINING THE CODE FOR GUI OF THE CALCULATOR :
+
+# creating an object of the Tk() class  
+guiWindow = tkinter.Tk()  
+# setting the size of the window  
+guiWindow.geometry("1366x768")   
+guiWindow.resizable(0, 0)  
+# setting the title of the Calculator window  
+guiWindow.title("GUI Calculator - BY_UDAY")  
+  
+# creating the label for the window  
+data = StringVar()  
+guiLabel = Label(  
+    guiWindow,  
+    text = "Label",  
+    anchor = SE,  
+    font = ("Cambria Math", 20),  
+    textvariable = data,  
+    background = "#A9A9A9",  
+    fg = "#000000"  
+)  
+# using the pack() method  
+guiLabel.pack(expand = True, fill = "both")  
+  
+# creating the frames for the buttons  
+# first frame  
+frameOne = Frame(guiWindow, bg = "#A9A9A9")  
+frameOne.pack(expand = True, fill = "both") # frame can expand if it gets some space  
+  
+# second frame  
+frameTwo = Frame(guiWindow, bg = "#00ffff")  
+frameTwo.pack(expand = True, fill = "both")  
+  
+# third frame  
+frameThree = Frame(guiWindow, bg = "#00ffff")  
+frameThree.pack(expand = True, fill = "both")  
+  
+# fourth frame  
+frameFour = Frame(guiWindow, bg = "#00ffff")  
+frameFour.pack(expand = True, fill = "both")  
+
+# fifth frame  
+frameFifth = Frame(guiWindow, bg = "#00ffff")  
+frameFifth.pack(expand = True, fill = "both")  
+  
+# creating buttons for each frame  
+# buttons for first frame  
+# button 1  
+buttonONE = Button(  
+    frameOne,  
+    text = "1",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_1  
+)  
+# placing buttons side by side  
+buttonONE.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button 2  
+buttonTWO = Button(  
+    frameOne,  
+    text = "2",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_2  
+)  
+# placing buttons side by side  
+buttonTWO.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button 3  
+buttonTHREE = Button(  
+    frameOne,  
+    text = "3",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_3 
+)  
+# placing buttons side by side  
+buttonTHREE.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button C  
+buttonC = Button(  
+    frameOne,  
+    text = "C",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_clear  
+)  
+# placing buttons side by side  
+buttonC.pack(side = LEFT, expand = True, fill = "both")  
+  
+# buttons for second frame  
+# button 4  
+buttonFOUR = Button(  
+    frameTwo,  
+    text = "4",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_4 
+)  
+# placing buttons side by side  
+buttonFOUR.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button 5  
+buttonFIVE = Button(  
+    frameTwo,  
+    text = "5",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_5  
+)  
+# placing buttons side by side  
+buttonFIVE.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button 6  
+buttonSIX = Button(  
+    frameTwo,  
+    text = "6",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_6  
+)  
+# placing buttons side by side  
+buttonSIX.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button +  
+buttonADD = Button(  
+    frameTwo,  
+    text = "+",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_add  
+)  
+# placing buttons side by side  
+buttonADD.pack(side = LEFT, expand = True, fill = "both")  
+  
+# buttons for third frame  
+# button 7  
+buttonSEVEN = Button(  
+    frameThree,  
+    text = "7",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_7 
+)  
+# placing buttons side by side  
+buttonSEVEN.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button 8  
+buttonEIGHT = Button(  
+    frameThree,  
+    text = "8",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_8  
+)  
+# placing buttons side by side  
+buttonEIGHT.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button 9  
+buttonNINE = Button(  
+    frameThree,  
+    text = "9",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_9  
+)  
+# placing buttons side by side  
+buttonNINE.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button -  
+buttonSUB = Button(  
+    frameThree,  
+    text = "-",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_sub  
+)  
+# placing buttons side by side  
+buttonSUB.pack(side = LEFT, expand = True, fill = "both")  
+  
+# buttons for fourth frame  
+# button 0  
+buttonZERO = Button(  
+    frameFour,  
+    text = "0",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_0 
+)  
+# placing buttons side by side  
+buttonZERO.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button *  
+buttonMUL = Button(  
+    frameFour,  
+    text = "*",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_multipy  
+)  
+# placing buttons side by side  
+buttonMUL.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button /  
+buttonDIV = Button(  
+    frameFour,  
+    text = "/",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_divide 
+)  
+
+# placing buttons side by side  
+buttonDIV.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button = 
+buttonEQUAL = Button(  
+    frameFour,  
+    text = "=",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = res  
+)  
+# placing buttons side by side  
+buttonEQUAL.pack(side = LEFT, expand = True, fill = "both") 
+
+
+# button //
+buttonAbsval = Button(  
+    frameFifth,  
+    text = "//",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_absval  
+)  
+# placing buttons side by side  
+buttonAbsval.pack(side = LEFT, expand = True, fill = "both") 
+
+
+# button %  
+buttonRemainder = Button(  
+    frameFifth,  
+    text = "%",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_remainder 
+)  
+# placing buttons side by side  
+buttonRemainder.pack(side = LEFT, expand = True, fill = "both") 
+
+
+# button **  
+buttonPower = Button(  
+    frameFifth,  
+    text = "**",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_power  
+)  
+# placing buttons side by side  
+buttonPower.pack(side = LEFT, expand = True, fill = "both")  
+  
+# button log 
+buttonPower = Button(  
+    frameFifth,  
+    text = "log",  
+    font = ("Times", "24", "bold italic"),  
+    relief = GROOVE,  
+    border = 1,  
+    command = button_log 
+)  
+# placing buttons side by side  
+buttonPower.pack(side = LEFT, expand = True, fill = "both")  
+  
+# running the GUI  
+guiWindow.mainloop()
 
 
 
